@@ -135,7 +135,7 @@ header {
 	/*background:#FF5A00;*/
 	/* background:#C65600; */
 	
-	background-image:url(../Images/Fotoessay_070915_3438_2_1920width_qualitylow2.jpg);
+	background-image:url(../images/Fotoessay_070915_3438_2_1920width_qualitylow2.jpg);
 	background-attachment:fixed;
 	background-size:cover;
 	/*background:#000;
@@ -346,7 +346,7 @@ header {
 /*$ footer  m*/
 footer {	/*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAOElEQVQYlWOQqPzwnwEPkKj88B+uBpdirOLognhtQpYk5CTyFON0IzbTUBSjK0BWRFTQEKUQXRMAL6BGAS7eg6QAAAAASUVORK5CYII=)*/
 	
-	background-image:url(../Images/Fotoessay_070915_3438_4.jpg);
+	background-image:url(../images/Fotoessay_070915_3438_4.jpg);
 	background-attachment:fixed;
 	background:#000;
 	background:#0088AE;
