@@ -1,0 +1,689 @@
+@charset "UTF-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		4;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/*CSS sider*/
+/*
+clipping mask i css (for chrome only)			http://bennettfeely.com/clippy/
+clipping mask i css (for alle?) ikke sirkel		http://cssplant.com/clip-path-generator
+box shadow i css								http://www.cssmatic.com/box-shadow
+gradient i css									http://www.colorzilla.com/gradient-editor/
+pattern i css									http://www.patternify.com/
+*/
+
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;        
+}
+
+/* Mobile Layout: 480px and below. */
+/*$ body    m*/
+body {
+	font-family: 'Arimo', sans-serif;
+	/*text-transform: lowercase;*/
+	font-size: 16px;
+	font-weight: 400;
+	/*min-height:100%;*/
+	position:relative;
+	/*background:#E5FF00;*/
+	background:#454545;
+	
+}
+	body p {
+		margin:0;
+	}
+	body h1 {
+		/*font-family: 'Changa One';*/
+		font-family: 'Open sans', sans-serif;
+		font-size:25px;
+		font-weight:300;
+		text-align:center;
+		color:#fff;
+	}
+/*		body h1 a:link {
+		}
+		body h1 a:visited {
+		}
+		body h1 a:hover {
+		}
+		body h1 a:active {
+		}
+*/
+
+	body h2 {									/*		(___________________)		*/
+		font-family: 'Arimo', sans-serif;
+		font-size:18px;
+		font-weight:400;
+		text-align:center;
+		/*padding: 2px 5%;*/
+		/*border-bottom: 1px solid #000;*/
+		color:#000;
+		color:#0088AE;
+		/*background:#006496;*/
+		/*background:#C65600;
+		background:#000;*/
+	}
+	body h3 {
+		font-family: 'Arimo', sans-serif;
+		font-size:17px;
+		font-weight:400;
+		color:#000;
+	}
+	body a {
+	}
+
+																/*bodybodybodybodybodybodybodybody*/
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 86.45%;
+	padding-left: 2.275%;
+	padding-right: 2.275%;
+	clear: none;
+	float: none;
+}
+#div1 {
+	background:#fff;
+}
+/*	 ____   ____  __________  ______	   _________	  __________  ________
+	/  //  /  // /	 _____// /	   ||     /	       \\	 /  ______// /		 \\
+   /  //__/  // /  //___  	/      ||    /   	    \\  /  //___  	/	     //
+  /	 _____  // /   ___//   /  __   ||	/	  		// /   ___//   /  ___  \\
+ /  //	/  // /	 //_____  /  // |  ||  /		  //  /	 //_____  /	 //  \  \\
+/__//  /__// /________// /__//  |__|| /________// 	 /________// /__//    \__\\
+*/
+/*$ header  m*/
+header {
+	/*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAOElEQVQYlWP4MFPsPwMe8GGm2H+4GlyKsYqjC+K1CVmSkJPIU4zTjdhMQ1GMrgBZEVFBQ5RCdE0AvPRJSQ4JvUgAAAAASUVORK5CYII=)*/
+	/*background:#006496;*/
+	/*background:#FF5A00;*/
+	/* background:#C65600; */
+	
+	background-image:url(../Images/Fotoessay_070915_3438_2_1920width_qualitylow2.jpg);
+	background-attachment:fixed;
+	background-size:cover;
+	/*background:#000;
+	background:#0088AE;*/
+}
+	.logo {
+		width:40%;
+		margin: 20px 30%;
+	}
+	.menu {
+		/*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGUlEQVQYlWOQqPzwHx0zMDAwoLMZRgF9AQCMrBQBdoEtDgAAAABJRU5ErkJggg==)*/
+		/* background:#C65600; */
+		/*background:#006683;*/
+		/*background:#0088AE;*/
+	}
+		.menu a {
+			font-size:18px;
+			margin: 0;
+			padding: 5px 0;
+			text-decoration:none;
+			text-align:center;
+			display:block;
+			border-top: 1px solid #fff;
+		}
+		.menu a:link {
+			color:#fff;
+			/*color:rgba(255,255,255,0.80);*/
+		}
+		.menu a:visited {
+			color:#fff;
+			/*color:rgba(255,255,255,0.80);*/
+		}
+		.menu a:hover {
+			color:#0088AE;
+			color:#000;
+			background:#fff;
+		}
+		.menu a:active {
+			color:#0088AE;
+			color:#000;
+			background:#fff;
+		}
+		.menu a.current {
+			color:#0088AE;
+			color:#000;
+			background:#fff;
+		}
+	.headerimageandtext {
+	width: 100%;
+	/*margin: 0 0 15px 0;*/
+	/*-webkit-box-shadow: 0px 16px 10px -9px rgba(0,0,0,0.10);
+	-moz-box-shadow: 0px 16px 10px -9px rgba(0,0,0,0.10);
+	box-shadow: 0px 16px 10px -9px rgba(0,0,0,0.10);*/
+	/*border-bottom: 1px solid #000;*/
+	background:#0088AE;
+	background:#fff;
+	
+	}
+	.headerimage {
+		width:40%;
+		margin: 20px 30% 0px 30%;
+		/*padding: 0 30%;
+		background:#fff;*/		/*med margin på 0 blir padder bildet en horisontal hvit bakgrunn som strekker seg fra den ene siden til den andre*/
+		/*-webkit-clip-path: circle(50% at 50% 50%);
+		clip-path: circle(50% at 50% 50%);*/
+	}
+	.headertext {
+		width:85%;
+		margin: 20px 7.5%;
+		color:#000;
+	}
+		.headertext p {
+			margin: 0 8%;
+		}
+		.headertext a {
+			color:inherit;
+		}
+/*	 ___________   _________	 __		  __   ____________	 __________	 __		  __   ____________
+	/	_____  // /		    \\  /  \\	/  // /___   ____//	/  _____//  /  \\	/  // /___   ____//
+   /  //    /_// /		    // /  	\\ /  //	 /  //	   / //__	   /	\\ /  //	 /	//
+  /	 //	   __	/		   // /	 /\	 \/	 //	    /  //	  /  ___//	  /  /\  \/	 //	    /  //
+ /	//____/ // /		  // /	// \	//	   /  //	 /  //_____	 /  // \	//	   /  //
+ \_________//  \_________// /__//   \__//	  /__//		/________// /__//	\__//	  /__//
+*/														
+/*$ content m*/	
+.content {
+	width:94%;
+	margin: 20px 0 0 0;
+	padding: 0 3%;
+	/*background:#BABCED;*/
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAIUlEQVQYlWNgQANfv379jy6GAWis6OvXr/8JYXq7iRhFAMTXQb9zBJU7AAAAAElFTkSuQmCC) repeat;
+}
+/*
+///////////
+.fullwidth
+//////////
+*/
+	.fullwidth {
+		width:100%;
+		margin-bottom:20px;
+	}
+		.fullwidth p {
+		}
+/*
+////////////////////
+.threequarterswidth
+////////////////////
+*/
+	.threequarterswidth {
+		width:100%;
+		margin-bottom:20px;
+		/*background:#AAFFAA;*/
+	}
+		.threequarterswidth p {
+		}
+	.threequarterswidth_d {
+		width:100%;
+		margin-bottom:20px;
+		/*background:#AAFFAA;*/
+	}
+		.threequarterswidth_d p {
+		}
+	.threequarterswidth_center {
+		width:100%;
+		margin-bottom:20px;
+		/*background:#AAFFAA;*/
+	}
+		.threequarterswidth_center p {
+		}
+	.threequarterswidth_center_d {
+		width:100%;
+		margin-bottom:20px;
+		/*background:#AAFFAA;*/
+	}
+		.threequarterswidth_center_d p {
+		}
+/*
+////////////
+.halfwidth
+///////////
+*/
+	.halfwidth {
+		width:100%;
+		margin-bottom:20px;
+		/*background:#AAFFAA;*/
+	}
+		.halfwidth p {
+		}
+	.halfwidth_d {
+		width:100%;
+		margin-bottom:20px;
+		/*background:#AAFFAA;*/
+	}
+		.halfwidth_d p {
+		}
+	.halfwidth_center {
+		width:100%;
+		margin-bottom:20px;
+		/*background:#AAFFAA;*/
+	}
+		.halfwidth_center p {
+		}
+	.halfwidth_center_d {
+		width:100%; /*endres først i desktop*/
+		margin-bottom:20px;
+	}
+		.halfwidth_center_d p {
+		}
+	.column {
+		width:100%;
+	}
+	.subpagecolumn {
+		width:36%;
+		margin: 0 32%;
+		/*background:#C02628;*/
+	}
+		.subpagecolumn img {
+		}
+		.subpagecolumn h3 {
+			font-size:4vw;
+			text-align:center;
+		}
+	.contentnav {
+	}
+		.contentnav a {
+			/*margin: 4px 0;
+			padding: 2px 0;
+			text-align:center;
+			border-radius:5px;
+			display:block;
+			background:#DDDDDD;*/
+		}
+	.flexslider {
+	}
+		.flexslider .slides img {
+		}
+	.imageframe {
+	}
+		.imageframe img {
+		}
+/*	 ___________  ________     ________     ___________	  __________  _________
+	/	______// /		  \\  /		   \\  /__		__// /	______// /	      \\
+   /  //___		/		  // /		   //	  /  //	    /  //___    /	     //
+  /	 ____//	   /		 // /		  //	 /  //	   /  ____//   /  ___  \\
+ /  //		  /		    // /		 //		/  //	  /	//_____   /	 //	 \  \\
+/__//		  \________//  \________//	   /__//	 /________// /__//	  \__\\
+*/
+/*$ footer  m*/
+footer {	/*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAOElEQVQYlWOQqPzwnwEPkKj88B+uBpdirOLognhtQpYk5CTyFON0IzbTUBSjK0BWRFTQEKUQXRMAL6BGAS7eg6QAAAAASUVORK5CYII=)*/
+	
+	background-image:url(../Images/Fotoessay_070915_3438_4.jpg);
+	background-attachment:fixed;
+	background:#000;
+	background:#0088AE;
+}
+	footer p {
+		margin-left:5%;
+		color:#fff;
+	}
+
+.zeroMargin_mobile {
+margin-left: 0;
+}
+.hide_mobile {
+display: none;
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+
+body {
+	background:#7D2325;
+}
+body h1 {
+	text-align:left;
+}
+body h2 {
+	text-align:left;
+}
+
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#div1 {
+}
+header {
+}
+	.logo {
+		/*mobile: width:40%;
+		margin: 20px 30%;*/
+		width:auto;
+		margin: 20px 5% 10px 5%;
+	}
+	.menu {
+		width:97%;
+		padding-left:3%;
+	}
+		.menu a {
+			/*mobile:
+			font-size:18px;
+			margin: 0;
+			padding: 5px 0;
+			text-decoration:none;
+			text-align:center;
+			display:block;
+			border-top: 1px solid #0088AE;*/
+			margin: 0 0;
+			padding: 10px 2% 10px 2%;
+			text-align:left;
+			display:inline-block;
+			border-top:none;
+			border-bottom:none;
+			/*border-right: 1px solid #0088AE;*/
+		}
+		.menu a:link {
+		}
+		.menu a:visited {
+		}
+		.menu a:hover {
+		}
+		.menu a:active {
+		}
+		.menu a.current {
+			/*color:#fff;
+			background:none;*/ /*for å "nullstille" currenten i mobil. men nu ser mobil ut som på tablet og desktop så det er ikke nødvendig*/
+			/*border-top: 2px solid #fff;*/
+			
+		}
+	.headerimageandtext {
+		/*mobile:
+		width: 100%;
+		padding-top: 10px;
+		-webkit-box-shadow: 0px 16px 10px -9px rgba(0,0,0,0.10);
+		-moz-box-shadow: 0px 16px 10px -9px rgba(0,0,0,0.10);
+		box-shadow: 0px 16px 10px -9px rgba(0,0,0,0.10);
+		background:#fff;*/
+		width:97%;
+		padding: 20px 0 20px 3%;
+		
+	}
+	.headerimage {
+		/*mobile:
+		width:40%;
+		margin: 0 30%;*/
+		margin: 0 0 0 1%;
+		float:left;
+		width:100px;
+		/*background:none;*/
+	}
+	.headertext {
+		/*mobile:
+		width:100%;
+		margin: 12px 0;
+		color:#fff;*/
+		margin:0;
+		width:60%;
+		clear:none;
+	}
+		.headertext p {
+			/*mobile: margin: 0 8%;*/
+			margin: 0 10% 0 4%;
+		}
+.content {
+}
+	.fullwidth {
+	}
+		.fullwidth p {
+			-webkit-columns: 200px; /* Chrome, Safari, Opera */
+   			-moz-columns: 200px; /* Firefox */
+			columns: 200px;
+			max-width:500px;
+			/*-webkit-columns: 225px 4;
+   			-moz-columns: 225px 4;
+			columns: 225px 4;*/
+		}
+	.threequarterswidth {
+		/*mobile:
+		width:100%;
+		margin-bottom:20px;*/
+		width:75%;
+	}
+		.threequarterswidth p {
+			-webkit-columns: 200px; /* Chrome, Safari, Opera */
+   			-moz-columns: 200px; /* Firefox */
+			columns: 200px;
+			max-width:500px;
+		}
+	.threequarterswidth_d {
+	}
+		.threequarterswidth_d p {
+			-webkit-columns: 200px; /* Chrome, Safari, Opera */
+   			-moz-columns: 200px; /* Firefox */
+			columns: 200px;
+			max-width:500px;
+		}
+	.threequarterswidth_center {
+		/*mobile:
+		width:100%;
+		margin-bottom:20px;*/
+		width:75%;
+		margin: 0 12.5% 20px 12.5%;
+	}
+		.threequarterswidth_center p {
+			-webkit-columns: 200px; /* Chrome, Safari, Opera */
+   			-moz-columns: 200px; /* Firefox */
+			columns: 200px;
+			max-width:500px;
+		}
+	.threequarterswidth_center_d {
+	}
+		.threequarterswidth_center_d p {
+			-webkit-columns: 200px; /* Chrome, Safari, Opera */
+   			-moz-columns: 200px; /* Firefox */
+			columns: 200px;
+			max-width:500px;
+		}
+	.halfwidth {
+		/*mobile:
+		width:100%;
+		margin-bottom:20px;*/
+		width:50%;
+	}
+		.halfwidth p {
+			-webkit-columns: 200px; /* Chrome, Safari, Opera */
+   			-moz-columns: 200px; /* Firefox */
+			columns: 200px;
+			max-width:500px;
+		}
+	.halfwidth_d {
+	}
+		.halfwidth_d p {
+			-webkit-columns: 200px; /* Chrome, Safari, Opera */
+   			-moz-columns: 200px; /* Firefox */
+			columns: 200px;
+			max-width:500px;
+		}
+	.halfwidth_center {
+		/*mobile:
+		width:100%;
+		margin-bottom:20px;*/
+		width:50%;
+		margin: 0 25% 20px 25%;
+	}
+		.halfwidth_center p {
+			-webkit-columns: 200px; /* Chrome, Safari, Opera */
+   			-moz-columns: 200px; /* Firefox */
+			columns: 200px;
+			max-width:500px;
+		}
+	.halfwidth_center_d {
+	}
+		.halfwidth_center_d p {
+			-webkit-columns: 200px; /* Chrome, Safari, Opera */
+   			-moz-columns: 200px; /* Firefox */
+			columns: 200px;
+			max-width:500px;
+		}
+	.column {
+		width:50%;
+		float:left;
+		clear:none;
+	}
+	.subpagecolumn {
+		/*mobile:
+		width:36%;
+		margin: 0 32%;*/
+		width:auto;
+		margin: 0 1% 0 0;
+		float:left;
+		clear:none;
+	}
+		.subpagecolumn img {
+			width:120px;
+			
+		}
+		.subpagecolumn h3 {
+			font-size:18px;
+		}
+	.contentnav {
+	}
+		.contentnav a {
+		}
+	.flexslider {
+	}
+		.flexslider .slides img {
+		}
+footer {
+}
+.hide_tablet {
+display: none;
+}
+.zeroMargin_tablet {
+margin-left: 0;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+body {
+	background:#004C2D;
+}
+.gridContainer {
+	width: 88.5%;
+	max-width: 1232px;
+	padding-left: 0.75%;
+	padding-right: 0.75%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#div1 {
+}
+header {
+}
+.content {
+}
+	.fullwidth {
+	}
+		.fullwidth p {
+		}
+	.threequarterswidth {
+	}
+		.threequarterswidth p {
+		}
+	.threequarterswidth_d {
+		width:75%;
+	}
+		.threequarterswidth_d p {
+		}
+	.threequarterswidth_center {
+	}
+		.threequarterswidth_center p {
+		}
+	.threequarterswidth_center_d {
+		width:75%;
+		margin: 0 12.5% 20px 12.5%;
+	}
+		.threequarterswidth_center_d p {
+		}
+	.halfwidth {
+	}
+		.halfwidth p {
+		}
+	.halfwidth_d {
+		width:50%;
+	}
+		.halfwidth_d p {
+		}
+	.halfwidth_center {
+	}
+		.halfwidth_center p {
+		}
+	.halfwidth_center_d {
+		width:50%;
+		margin: 0 25% 20px 25%;
+	}
+		.halfwidth_center_d p {
+		}
+	.column {
+	}
+	.subpagecolumn {
+		margin: 0 5% 0 0;
+	}
+		.subpagecolumn image {
+		}
+		.subpagecolumn h3 {
+		}
+	.marginleftdesktop {
+	}
+	.flexslider {
+	}
+		.flexslider .slides img {
+		}
+footer {
+}
+.zeroMargin_desktop {
+margin-left: 0;
+}
+.hide_desktop {
+display: none;
+}
+}
